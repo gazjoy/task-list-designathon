@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block content %}
+<style>
+.designathon-progress {
+  float: right
+}
+.designathon-items {
+  padding-left: 0;
+}
+</style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Service name goes here</h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">In progress</h2>
+          <ul class="app-task-list__items designathon-items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">Your contact details</a>
+              </span>
+              <span class="designathon-progress">3 questions left</span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">Not started</h2>
+
+          <ul class="app-task-list__items designathon-items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  List convictions
+                </a>
+              </span>
+              <span class="designathon-progress">5 questions left</span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Provide financial evidence
+              </span>
+              <span class="designathon-progress">2 questions left</span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Give medical information
+              </span>
+              <span class="designathon-progress">3 questions left</span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Submit and pay
+              </span>
+              <span class="designathon-progress">2 questions left</span>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">Completed</h2>
+          <ul class="app-task-list__items designathon-items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">Check eligibility</span>
+              <span class="designathon-progress">
+                <a href="#" aria-describedby="read-declaration-status">Check answers</a>
+              </span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">Read declaration</span>
+              <span class="designathon-progress">
+                <a href="#" aria-describedby="read-declaration-status">Check answers</a>
+              </span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">Company information</span>
+              <span class="designathon-progress">
+                <a href="#" aria-describedby="read-declaration-status">Check answers</a>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

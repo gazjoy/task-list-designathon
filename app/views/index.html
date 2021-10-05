@@ -9,35 +9,49 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+      <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+      <p>GOV.UK experiements with patterns and components.</p>
+      
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <h2 class="govuk-heading-l">Task lists</h2>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <h2 class="govuk-heading-m">Progress focussed task list</h2>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <h3 class="govuk-heading-s">Rationale</h3>
+      <p>The purpose of tags in a task list are to provide meaning to the 
+      overall service progress and to understand what is the status of a specific task, 
+      has it been started, completed or not? This example doesn't use the tag component, I'd like to explore
+      different ways of providing the progress information.</p>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
+      <p>There are 4 statuses each with nuanced behaviours:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
+        <li>[In progress] - I have started this one so enable me to complete it. Have at the top.</li>
+        <li>[Not started] - If I get stuck on a task I might want to jump onto another 
+        task meaning I'd have multiple tasks in progress. Have it at the top if nothing is in progress.</li>
+        <li>[Cannot start yet] - If I cant start it, I don’t need to interact with it, have it lower 
+        down the page. Move it to [Not started] and let me interact with it when I can start it.</li>
+        <li>[Completed] - I am done with it, keep it on the page and let me check my answers but have it 
+        at the bottom. The check link would go to a check your answers page with anwers from the specific task.</li>
       </ul>
+
+      <p>As a user moves through their tasks, the tasks move from [Not started], to [In progress] and [Completed].
+      The end state before submission of all data for the service would be all tasks are [Completed].
+      All other statuses would not show on the task list screen.</p>
+
+      <h4 class="govuk-heading-s">Considering screen reader users</h4>
+      <p>Putting tasks in this order would give screen reader users the most important task to work on first
+      rather then having them navigate through completed tasks before getting to the next one to do.</p>
+
+      <p>Examples of the same service as a user progresses through it.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="task-lists/progress-none-started">Progress focussed – no tasks started</a></li>
+        <li><a href="task-lists/progress-in-progress">Progress focussed – tasks in progress</a></li>
+        <li><a href="task-lists/progress-all-completed">Progress focussed – all tasks completed</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
     </div>
   </div>
 
